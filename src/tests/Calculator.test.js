@@ -71,6 +71,26 @@ it('should subtract one number from another', () => {
     expect(runningTotal.text()).toEqual('15');
   });
 
+  
+  it ('should divide two numbers', () => {
+    // Writing const for buttons required for the test
+    const button2 = container.find('#number2')
+    const button1 = container.find('#number1')
+    const button7 = container.find('#number7')
+    const divide = container.find('#operator-divide')
+    const equals = container.find('#operator-equals')
+    // The container finds the running total
+    const runningTotal = container.find('#running-total');
+    // Adding click buttons simulation
+    button2.simulate('click')
+    button1.simulate('click')
+    divide.simulate('click')
+    button7.simulate('click')
+    equals.simulate('click')
+    // After simulating clicking the buttons, the total expected should be 3
+    expect(runningTotal.text()).toEqual('3');
+  });
+
 
 
 })
