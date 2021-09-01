@@ -90,7 +90,32 @@ it('should subtract one number from another', () => {
     // After simulating clicking the buttons, the total expected should be 3
     expect(runningTotal.text()).toEqual('3');
   });
+ 
+  it ('should clear the running total', () => {
+    // it clears the running total without affecting the calculation
+    const button7 = container.find('#number7')
+    const button6 = container.find('#number6')
+    const button5 = container.find('#number5')
+    const button4 = container.find('#number4')
+    
+    const clear = container.find('#clear')
+    const add = container.find('#operator_add')
+    const multiply = container.find('#operator-multiply');
+    const equals = container.find('#operator-equals')
 
+    const runningTotal = container.find('#running-total');
 
+    button7.simulate('click')
+    add.simulate('click')
+    button6.simulate('click')
+    multiply.simulate
+    button5.simulate('click')
+    add.simulate('click')
+    button4.simulate('click')
+    clear.simulate('click')
+    equals.simulate('click')
+    
+    expect(runningTotal.text()).toEqual('72')
+  });
 
 })
