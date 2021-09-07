@@ -108,14 +108,14 @@ it('should subtract one number from another', () => {
     button7.simulate('click')
     add.simulate('click')
     button6.simulate('click')
-    multiply.simulate
+    multiply.simulate('click')
     button5.simulate('click')
     add.simulate('click')
     button4.simulate('click')
     clear.simulate('click')
     equals.simulate('click')
     
-    expect(runningTotal.text()).toEqual('72')
+    expect(runningTotal.text()).toEqual('65')
   });
 
 })
